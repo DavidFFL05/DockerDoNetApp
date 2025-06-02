@@ -1,0 +1,15 @@
+En la ruta de DockerDoNetApp
+git status -> para verificar cual fue el cambio
+git add .
+git commit -m "Tu mensaje de cambio"
+git push origin main
+
+en tu cuenta de GitHub ya se cambio
+
+
+Ahora para hacer el cambio en tu localhost debes cerrar el programa donde estes trabajando y en la misma raíz de tu terminal poner
+dotnet clean
+dotnet build
+dotnet run
+
+eso te proporciona una nueva ruta y ahí se verifica

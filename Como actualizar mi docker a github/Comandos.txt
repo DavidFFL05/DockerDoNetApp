@@ -1,5 +1,6 @@
 En la ruta de DockerDoNetApp
 git status -> para verificar cual fue el cambio
+
 git add .
 git commit -m "Tu mensaje de cambio"
 git push origin main

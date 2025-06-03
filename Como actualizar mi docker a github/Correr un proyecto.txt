@@ -1,0 +1,14 @@
+En la carpeta raíz donde está tu Dockerfile, construyes la imagen:
+
+docker build -t dockerdonetapp .
+
+
+Luego corres el contenedor mapeando puerto local 5000 al puerto 80 del contenedor:
+
+docker run -d -p 5000:80 --name dockerdonetapp_container dockerdonetapp
+
+
+Para detener o eliminar contenedor
+
+docker stop dockerdonetapp_container
+docker rm dockerdonetapp_container

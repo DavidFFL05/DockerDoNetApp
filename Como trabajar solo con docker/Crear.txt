@@ -1,0 +1,21 @@
+*Recuerda construir tu dockerfile...
+• Construyes una imagen de Docker, por ejemplo imagen_fastapi:
+docker build -t imagen_fastapi .
+
+• Le das a correr, con este comando, esto permitirá a que cada actualización q hagas en Docker en la nube se muestre igual:
+docker run -d -p 8000:8000 -v ${PWD}:/code imagen_fastapi
+
+Puedes detener y volver con:
+docker ps -> para verificar los contenedores activos
+docker stop (el ID del contenedor)
+docker rm (el ID del contenedor)
+
+
+#Cuando usas esta variable de entorno, cualquier cambio que hagas en los archivos dentro del directorio de tu máquina local se refleja directamente dentro del contenedor en el directorio /code. Esto es útil para el desarrollo, ya que puedes modificar los archivos en tu máquina local y el contenedor se actualizará automáticamente con esos cambios. Es una forma de montar un volumen, es decir, un directorio compartido entre tu sistema y el contenedor Docker.
+
+Esto permite que, al trabajar en el contenedor, puedas ver los cambios sin necesidad de reiniciar el contenedor, haciendo el proceso de desarrollo mucho más ágil.
+
+
+# Conectarte a un contenedor que ya se está ejecutando:
+en la parte baja de Visual escoger la opción q dice attach to running container; escoger luego el contenedor q se quiere trabajar, al ejecutar se está trabajando en el mismo contenedor lo q permite que se modifique ahí mismo.
+Para salir se da en close remote connection
